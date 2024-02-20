@@ -7,33 +7,78 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
-<body>
-<header>
-    <h1>KYLIE COSMETICS</h1>
-    <form id="search-form" action="/search" method="GET">
-        <input type="text" id="search-input" name="q" placeholder="search">
-        <button type="submit">search</button>
-    </form>
+
+<!--
+    1. You don't stick to BEM methodology!!!
+    2. Note any nesting is defined by 4 spaces or one tab!!!
+
+    here is BEM methodology link, check it out, this is necessary for proper styling, try stick to this methodology
+    https://en.bem.info/methodology/quick-start/
+-->
+<body class="main-content">
+<!--My example how it should look like-->
+<header class="header">
+    <div class="header__block-wrapper">
+        <h1 class="header__title">KYLIE COSMETICS</h1>
+        <div class="header__search-block">
+            <form id="search-form" action="/search" method="GET" class="search-form">
+                <input type="text" id="search-input" name="q" placeholder="search" class="search-form__input">
+                <button type="submit" class="search-form__button">search</button>
+            </form>
+        </div>
+    </div>
 </header>
-<div class="photo">
-<img src="kyj.jpg" alt="lipstick" width="200" height="318">
-<div class="caption">Kylie lipstick</div>
-<div class="overlay">New</div>
-<div class="price">$79.99</div>
-</div>
 
-<div class="photo">
-<img src="lipstick.jpg" alt="lipstick 2" width="200" height="318">
-<div class="caption">Matt lipstick</div>
-<div class="price">$80.95</div>
+<div class="main">
+    <div class="product-list">
+        <article class="product-item">
+            <img src="assets/img/kyj.jpg" alt="Kylie lipstick" class="product-item__img">
+            <div class="product-item__info">
+                <h3 class="product-item__info-name size-medium-20">Kylie lipstick</h3>
+                <span class="product-item__info-overlay beauty-theme-color-second size-small-20">New</span>
+                <span class="product-item__info-price size-small-20">$79.99</span>
+            </div>
+        </article>
+        <article class="product-item">
+            <img src="assets/img/lipstick.jpg" alt="Matt lipstick" class="product-item__img">
+            <div class="product-item__info">
+                <h3 class="product-item__info-name size-medium-20">Matt lipstick</h3>
+                <span class="product-item__info-price size-small-20">$80.95</span>
+            </div>
+        </article>
+        <article class="product-item">
+            <img src="assets/img/bronzer.jpg" alt="Bronzer" class="product-item__img">
+            <div class="product-item__info">
+                <h3 class="product-item__info-name size-medium-20">Bronzer</h3>
+                <span class="product-item__info-price size-small-20">$78.99</span>
+            </div>
+        </article>
+        <article class="product-item">
+            <img src="assets/img/kyj.jpg" alt="Kylie lipstick" class="product-item__img">
+            <div class="product-item__info">
+                <h3 class="product-item__info-name size-medium-20">Kylie lipstick</h3>
+                <span class="product-item__info-overlay beauty-theme-color-second size-small-20">New</span>
+                <span class="product-item__info-price size-small-20">$79.99</span>
+            </div>
+        </article>
+        <article class="product-item">
+            <img src="assets/img/kyj.jpg" alt="Kylie lipstick" class="product-item__img">
+            <div class="product-item__info">
+                <h3 class="product-item__info-name size-medium-20">Kylie lipstick</h3>
+                <span class="product-item__info-overlay beauty-theme-color-second size-small-20">New</span>
+                <span class="product-item__info-price size-small-20">$79.99</span>
+            </div>
+        </article>
+        <article class="product-item">
+            <img src="assets/img/kyj.jpg" alt="Kylie lipstick" class="product-item__img">
+            <div class="product-item__info">
+                <h3 class="product-item__info-name size-medium-20">Kylie lipstick</h3>
+                <span class="product-item__info-overlay beauty-theme-color-second size-small-20">New</span>
+                <span class="product-item__info-price size-small-20">$79.99</span>
+            </div>
+        </article>
+    </div>
 </div>
-
-<div class="photo">
-<img src="bronzer.jpg" alt="bronzer" width="200" height="318">    
-<div class="caption">Bronzer</div>
-<div class="price">$78.99</div>
-</div>
-
 <script src="app.js"></script>
 
 </body>
